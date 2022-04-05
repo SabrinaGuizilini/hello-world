@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Global */
+
+body{
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, p{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  display: block;
+  height: auto;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Header e main */
+
+main{
+  background-image: linear-gradient(rgba(21, 6, 6, 0.5), rgba(21, 6, 6, 0.5)), url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.conteudo-principal{
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  align-content: center;
+}
+
+header span{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+header .menu{
+  display: flex;
+  gap: 20px;
+}
+
+header .menu a{
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+@media (max-width: 600px){
+  header .menu a{
+    font-size: 0.9rem;
+  }
+}
+
+header .menu a:hover{
+  color: #CE0A00;
+}
+
+.conteudo{
+  display: flex;
+  flex-direction: column;
+} 
+
+.conteudo h1{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  align-self: center;
+  max-width: 30ch;
+  margin-bottom: 40px;
+}
+
+.formulario{
+  background-color: #CE0A00;
+  border: 1px solid #fff;
+  padding: 40px 40px;
+  align-self: start;
+  margin-bottom: 20px;
+}
+
+.formulario h3{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linha-1{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.linha-2{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"], input[type="email"]{
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+input::placeholder{
+  font-size: 0.75rem;
+  color: #767676;
+}
+
+button{
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #101010;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 0;
+  cursor: pointer;
+  width: calc(50% - 5px);
+}
+
+.checkboxes{
+  align-self: start;
+}
+
+/* Checkbox personalizada */
+
+.check-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.check-item .check{
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
+  border-radius: 4px;
+  background: #CE0A00;
+}
+
+.check-item .check::after{
+  content:"";
+  position: absolute;
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.check-item .texto{
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 800px){
+  header{
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  header span:first-child{
+    margin-bottom: 8px;
+  }
+  .conteudo h1{
+    font-size: 2.5rem;
+  }
+  .formulario{
+    align-self: center;
+  }
+  .checkboxes{
+    align-self: center;
+  }
+}
+
+@media (max-width: 650px){
+  input[type="text"], input[type="email"]{
+    width: 100%;
+  }
+  button{
+    align-self: center;
+  }
+  .formulario h3{
+    text-align: center;
+  }
+  .conteudo h1{
+    font-size: 2rem;
+  }
+}
+
+/* Sobre*/
+
+.sobre{
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.sobre-conteudo{
+  margin-top: 40px;
+}
+
+.sobre img{
+  width: 100%;
+  max-width: 500px;
+}
+
+.sobre-conteudo h2{
+  text-transform: uppercase;
+  color: #CE0A00;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.sobre-conteudo p{
+  font-size: 0.8rem;
+  color: #0B0B0B;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.primeiro{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1100px){
+  .sobre img{
+    display: none;
+  }
+  .sobre-conteudo h2, .sobre-conteudo p{
+    text-align: center;
+  }
+  .sobre-conteudo h2{
+    margin-bottom: 20px;
+  }
+  .sobre-conteudo p{
+    max-width: 80ch;
+    font-size: 0.9rem;
+  }
+  .sobre{
+    padding-bottom: 40px;
+    justify-content: center;
+  }
+}
+
+/* Videos */
+
+.bg-videos{
+  background-color: #222222;
+}
+
+.videos{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.videos h2{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #CE0A00;
+  text-align: center;
+}
+
+.videos ul{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.videos ul li{
+  display: flex;
+  flex-direction: column;
+}
+
+.videos ul li img{
+  width: 100%;
+  max-width: 350px;
+}
+
+.videos ul li span{
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px){
+  .videos ul li span{
+    text-align: center;
+  }
+  .videos ul li img{
+    max-width: 400px;
+  }
+}
+
+/* Depoimentos */
+
+.bg-depoimentos{
+  background-color: #222222;
+}
+
+.depoimentos{
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.depoimentos ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.depoimentos ul li{
+  display: flex;
+  flex-direction: column;
+}
+
+.depoimentos ul li img{
+  width: 100%;
+  max-width: 60px;
+  margin-bottom: 20px;
+}
+
+.depoimentos ul li p{
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  max-width: 40ch;
+}
+
+.depoimentos ul li span{
+  text-transform: uppercase;
+  color: #CE0A00;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Footer */
+
+footer{
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer p{
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px){
+  footer p{
+    font-size: 0.7rem;
+  }
+}
